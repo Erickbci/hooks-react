@@ -6,7 +6,7 @@ import Menu from '../components/layout/Menu'
 import Content from '../components/layout/Content'
 
 import DataContext, { data } from '../data/DataContext'
-import Store, { AppContext } from '../data/Store'
+import Store from '../data/Store'
 
 
 const App = props => {
@@ -15,10 +15,6 @@ const App = props => {
 
     return (
         <Store>
-            <AppContext.Provider value={{
-                state,
-                setState
-            }}>
                 <DataContext.Provider 
                 value={{ 
                     state,
@@ -31,7 +27,7 @@ const App = props => {
                             </Router>
                         </div>
                 </DataContext.Provider>
-            </AppContext.Provider>
+            
         </Store>
     )
 }

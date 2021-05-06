@@ -4,7 +4,7 @@ import PageTitle from '../../components/layout/PageTitle'
 import SectionTitle from '../../components/layout/SectionTitle'
 
 import DataContext from '../../data/DataContext'
-import AppContext from '../../data/Store'
+import {AppContext} from '../../data/Store'
 
 const UseContext = (props) => {
     const { state, setState } = useContext(DataContext)
@@ -15,8 +15,6 @@ const UseContext = (props) => {
             number: state.number + delta
         })
     }
-
-    console.log(useContext(AppContext));
 
     const { number, setNumber, text } = useContext(AppContext)
 
